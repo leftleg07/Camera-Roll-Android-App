@@ -3,10 +3,11 @@ package us.koller.cameraroll.util.animators;
 import android.content.Context;
 import android.graphics.ColorMatrix;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.Property;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
+
+import androidx.annotation.RequiresApi;
 
 // stolen from: https://github.com/nickbutcher/plaid/blob/master/app/src/main/java/io/plaidapp/util/AnimUtils.java
 

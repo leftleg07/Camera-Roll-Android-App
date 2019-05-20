@@ -1,8 +1,9 @@
 package us.koller.cameraroll.util;
 
-import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.viewpager.widget.ViewPager;
 
 public class ParallaxTransformer implements ViewPager.PageTransformer {
 

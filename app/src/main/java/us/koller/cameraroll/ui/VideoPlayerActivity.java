@@ -10,10 +10,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +18,11 @@ import android.view.WindowInsets;
 import android.view.WindowManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageButton;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
@@ -253,7 +254,7 @@ public class VideoPlayerActivity extends ThemeableActivity {
         DefaultRenderersFactory renderersFactory = new DefaultRenderersFactory(this);
 
         // Create the player
-        player = ExoPlayerFactory.newSimpleInstance(renderersFactory,
+        player = ExoPlayerFactory.newSimpleInstance(this, renderersFactory,
                 new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(null)),
                 new DefaultLoadControl());
 
@@ -346,10 +347,10 @@ public class VideoPlayerActivity extends ThemeableActivity {
 
     public static class SimpleEventListener implements Player.EventListener {
 
-        @Override
-        public void onTimelineChanged(Timeline timeline, Object manifest) {
-
-        }
+//        @Override
+//        public void onTimelineChanged(Timeline timeline, Object manifest) {
+//
+//        }
 
         @Override
         public void onTracksChanged(TrackGroupArray trackGroupArray, TrackSelectionArray trackSelectionArray) {
@@ -376,10 +377,10 @@ public class VideoPlayerActivity extends ThemeableActivity {
 
         }
 
-        @Override
-        public void onPositionDiscontinuity() {
-
-        }
+//        @Override
+//        public void onPositionDiscontinuity() {
+//
+//        }
 
         @Override
         public void onPlaybackParametersChanged(PlaybackParameters playbackParameters) {

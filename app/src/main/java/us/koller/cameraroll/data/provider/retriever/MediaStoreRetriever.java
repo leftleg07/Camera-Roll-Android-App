@@ -8,9 +8,10 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.BaseColumns;
 import android.provider.MediaStore;
-import android.support.v4.content.CursorLoader;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.loader.content.CursorLoader;
 
 import java.io.File;
 import java.util.ArrayList;

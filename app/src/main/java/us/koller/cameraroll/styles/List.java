@@ -1,11 +1,12 @@
 package us.koller.cameraroll.styles;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import us.koller.cameraroll.R;
 

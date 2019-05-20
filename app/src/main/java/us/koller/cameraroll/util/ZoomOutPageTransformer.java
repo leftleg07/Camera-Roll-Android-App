@@ -1,7 +1,8 @@
 package us.koller.cameraroll.util;
 
-import android.support.v4.view.ViewPager;
 import android.view.View;
+
+import androidx.viewpager.widget.ViewPager;
 
 //heavily by: https://developer.android.com/training/animation/screen-slide.html#pagetransformer
 @SuppressWarnings("unused")

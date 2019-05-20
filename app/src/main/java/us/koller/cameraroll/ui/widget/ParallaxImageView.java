@@ -1,13 +1,15 @@
 package us.koller.cameraroll.ui.widget;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.recyclerview.widget.RecyclerView;
+
 import us.koller.cameraroll.R;
 
-public class ParallaxImageView extends android.support.v7.widget.AppCompatImageView {
+public class ParallaxImageView extends AppCompatImageView {
 
     public static final String RECYCLER_VIEW_TAG = "RECYCLER_VIEW_TAG";
 

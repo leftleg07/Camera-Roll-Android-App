@@ -1,8 +1,9 @@
 package us.koller.cameraroll.ui.widget;
 
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class GridMarginDecoration extends RecyclerView.ItemDecoration {
 

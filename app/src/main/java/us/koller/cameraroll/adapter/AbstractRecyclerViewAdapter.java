@@ -1,7 +1,8 @@
 package us.koller.cameraroll.adapter;
 
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public abstract class AbstractRecyclerViewAdapter<T> extends RecyclerView.Adapter {
 
