@@ -62,6 +62,11 @@ public class ExoPlayerSeekbar extends AppCompatSeekBar implements TimeBar, SeekB
     }
 
     @Override
+    public long getPreferredUpdateDelay() {
+        return 0;
+    }
+
+    @Override
     public void setAdGroupTimesMs(@Nullable long[] adGroupTimesMs, @Nullable boolean[] playedAdGroups, int adGroupCount) {
 
     }

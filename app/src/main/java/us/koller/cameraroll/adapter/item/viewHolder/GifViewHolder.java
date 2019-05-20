@@ -4,7 +4,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import uk.co.senab.photoview.PhotoViewAttacher;
+import com.github.chrisbanes.photoview.OnViewTapListener;
+import com.github.chrisbanes.photoview.PhotoViewAttacher;
+
 import us.koller.cameraroll.R;
 import us.koller.cameraroll.data.models.AlbumItem;
 import us.koller.cameraroll.ui.ItemActivity;
@@ -35,7 +37,7 @@ public class GifViewHolder extends ViewHolder {
 
     public void setAttacher(ImageView imageView) {
         attacher = new PhotoViewAttacher(imageView);
-        attacher.setOnViewTapListener(new PhotoViewAttacher.OnViewTapListener() {
+        attacher.setOnViewTapListener(new OnViewTapListener() {
             @Override
             public void onViewTap(View view, float x, float y) {
                 imageOnClick(view);
@@ -51,7 +53,6 @@ public class GifViewHolder extends ViewHolder {
     @Override
     public void onSharedElementExit(final ItemActivity.Callback callback) {
         if (attacher != null) {
-            attacher.cleanup();
             attacher = null;
         }
         callback.done();
@@ -60,7 +61,6 @@ public class GifViewHolder extends ViewHolder {
     @Override
     public void onDestroy() {
         if (attacher != null) {
-            attacher.cleanup();
             attacher = null;
         }
         super.onDestroy();
