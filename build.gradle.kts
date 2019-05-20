@@ -6,14 +6,16 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath(Config.Plugins.android)
+        classpath(Config.Plugins.kotlin)
     }
 }
 
 allprojects {
     repositories {
         jcenter()
-        maven { url "https://jitpack.io" }
-        maven { url "https://maven.google.com" }
+        google()
+        maven("https://jitpack.io")
+        maven("https://maven.google.com")
     }
 }
