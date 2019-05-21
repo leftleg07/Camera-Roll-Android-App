@@ -11,9 +11,10 @@ android {
         minSdkVersion(Config.SdkVersions.min)
         targetSdkVersion(Config.SdkVersions.target)
 
-        versionName = Config.Version.name
         versionCode = Config.Version.code
+        versionName = Config.Version.name
 
+        vectorDrawables.useSupportLibrary = true
         applicationId = "us.koller.cameraroll.kotlin"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,12 +29,42 @@ android {
             resValue("string", "app_name", "Camera Roll (debug)")
         }
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
     implementation(Config.Libs.Kotlin.jvm)
-    implementation("androidx.appcompat:appcompat:1.0.2")
-    implementation("androidx.core:core-ktx:1.0.1")
+    implementation(Config.Libs.AndroidX.appcompat)
+    implementation(Config.Libs.AndroidX.core)
+    implementation(Config.Libs.AndroidX.cardView)
+    implementation(Config.Libs.Material.material)
+    implementation(Config.Libs.AndroidX.palette)
+    implementation(Config.Libs.AndroidX.exifInterface)
+    implementation(Config.Libs.AndroidX.preference)
+    implementation(Config.Libs.AndroidX.annotation)
+
+    implementation(Config.Libs.Misc.glide)
+    annotationProcessor(Config.Libs.Misc.glideCompiler)
+
+    implementation(Config.Libs.Misc.scaleImageView)
+
+    // using an older Version because I still want to use the ImageView
+    //noinspection GradleDependency
+    implementation(Config.Libs.Misc.photoView)
+
+    implementation(Config.Libs.Misc.dragSelectRecyclerView)
+
+    implementation(Config.Libs.Misc.exoPlayer)
+
+    implementation(Config.Libs.Misc.pageIndicatorView)
+
+    implementation(Config.Libs.Misc.recyclerFastScroll)
+
     testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test.ext:junit:1.1.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.1.1")

@@ -1,16 +1,15 @@
 object Config {
     object Version {
-        const val name = "1.0.0"
         const val code = 1
+        const val name = "v1.0.0"
     }
-    val submodules = listOf("auth", "auth-github", "common", "firestore", "database", "storage")
 
     private const val kotlinVersion = "1.3.21"
 
     object SdkVersions {
         const val compile = 28
         const val target = 28
-        const val min = 16
+        const val min = 19
     }
 
     object Plugins {
@@ -23,20 +22,45 @@ object Config {
             const val jvm = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
         }
 
-        object Support {
-            private const val version = "28.0.0"
+        object AndroidX {
+            private const val version = "1.0.0"
+            const val appcompat = "androidx.appcompat:appcompat:$version"
+            const val core = "androidx.core:core-ktx:$version"
+            const val cardView = "androidx.cardview:cardview:$version"
+            const val palette = "androidx.palette:palette:$version"
+            const val exifInterface = "androidx.exifinterface:exifinterface:$version"
+            const val preference = "androidx.legacy:legacy-preference-v14:$version"
+            const val annotation = "androidx.annotation:annotation:$version"
+        }
 
-            const val multidex = "com.android.support:multidex:1.0.3"
-            const val annotations = "com.android.support:support-annotations:$version"
-            const val v4 = "com.android.support:support-v4:$version"
-            const val appCompat = "com.android.support:appcompat-v7:$version"
-            const val design = "com.android.support:design:$version"
-            const val recyclerView = "com.android.support:recyclerview-v7:$version"
-            const val cardView = "com.android.support:cardview-v7:$version"
-            const val customTabs = "com.android.support:customtabs:$version"
-            const val mediaCompat = "com.android.support:support-media-compat:$version"
+        object Material {
+            const val material = "com.google.android.material:material:1.0.0"
+        }
 
-            const val constraint = "com.android.support.constraint:constraint-layout:1.1.3"
+        object Misc {
+            private const val glideVersion = "4.9.0"
+            private const val scaleImageViewVersion = "3.10.0"
+            private const val photoViewVersion = "2.3.0"
+            private const val dragSelectRecyclerViewVersion = "0.3"
+            private const val exoPlayerVersion = "2.10.0"
+            private const val pageIndicatorViewVersion = "1.0.3"
+            private const val recyclerFastScrollVersion = "0.3.2"
+            
+            const val glide = "com.github.bumptech.glide:glide:$glideVersion"
+            const val glideCompiler = "com.github.bumptech.glide:compiler:$glideVersion"
+
+            const val  scaleImageView = "com.davemorrissey.labs:subsampling-scale-image-view:$scaleImageViewVersion"
+
+            const val  photoView = "com.github.chrisbanes:PhotoView:$photoViewVersion"
+
+            const val  dragSelectRecyclerView = "com.github.MFlisar:DragSelectRecyclerView:$dragSelectRecyclerViewVersion"
+
+            const val  exoPlayer = "com.google.android.exoplayer:exoplayer:$exoPlayerVersion"
+
+            const val  pageIndicatorView = "com.romandanylyk:pageindicatorview:$pageIndicatorViewVersion"
+
+            const val  recyclerFastScroll = "com.github.pluscubed:recycler-fast-scroll:$recyclerFastScrollVersion@aar"
+            
         }
 
         object Arch {
@@ -70,30 +94,7 @@ object Config {
             const val twitter = "com.twitter.sdk.android:twitter-core:3.1.1@aar"
         }
 
-        object Misc {
-            private const val retrofitVersion = "2.4.0"
-            private const val leakCanaryVersion = "1.6.1"
-            private const val glideVersion = "4.8.0"
-            private const val butterVersion = "8.8.1"
 
-            const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
-            const val retrofitGson = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-
-            const val leakCanary = "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
-            const val leakCanaryFragments =
-                    "com.squareup.leakcanary:leakcanary-support-fragment:$leakCanaryVersion"
-            const val leakCanaryNoop =
-                    "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
-
-            const val glide = "com.github.bumptech.glide:glide:$glideVersion"
-            const val glideCompiler = "com.github.bumptech.glide:compiler:$glideVersion"
-
-            const val butterKnife = "com.jakewharton:butterknife:$butterVersion"
-            const val butterKnifeCompiler = "com.jakewharton:butterknife-compiler:$butterVersion"
-
-            const val permissions = "pub.devrel:easypermissions:1.3.0"
-            const val materialProgress = "me.zhanghai.android.materialprogressbar:library:1.4.2"
-        }
 
         object Test {
             const val junit = "junit:junit:4.12"
