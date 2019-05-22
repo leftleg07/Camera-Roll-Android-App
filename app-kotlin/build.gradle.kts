@@ -41,6 +41,7 @@ dependencies {
     implementation(Config.Libs.Kotlin.jvm)
     implementation(Config.Libs.AndroidX.appcompat)
     implementation(Config.Libs.AndroidX.core)
+    implementation(Config.Libs.AndroidX.fragment)
     implementation(Config.Libs.AndroidX.cardView)
     implementation(Config.Libs.Material.material)
     implementation(Config.Libs.AndroidX.palette)
@@ -64,6 +65,10 @@ dependencies {
     implementation(Config.Libs.Misc.pageIndicatorView)
 
     implementation(Config.Libs.Misc.recyclerFastScroll)
+
+    // rx preferences
+    // https://github.com/f2prateek/rx-preferences
+    implementation("com.f2prateek.rx.preferences2:rx-preferences:2.0.0")
 
     testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test.ext:junit:1.1.0")

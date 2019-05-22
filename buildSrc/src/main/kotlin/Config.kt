@@ -26,6 +26,7 @@ object Config {
             private const val version = "1.0.0"
             const val appcompat = "androidx.appcompat:appcompat:$version"
             const val core = "androidx.core:core-ktx:$version"
+            const val fragment = "androidx.fragment:fragment-ktx:$version"
             const val cardView = "androidx.cardview:cardview:$version"
             const val palette = "androidx.palette:palette:$version"
             const val exifInterface = "androidx.exifinterface:exifinterface:$version"
