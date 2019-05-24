@@ -35,7 +35,7 @@ object Config {
         }
 
         object Material {
-            const val material = "com.google.android.material:material:1.0.0"
+            const val material = "com.google.android.material:material:1.1.0-alpha06"
         }
 
         object Misc {

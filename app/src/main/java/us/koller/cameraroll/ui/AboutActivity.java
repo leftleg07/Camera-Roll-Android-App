@@ -61,8 +61,8 @@ public class AboutActivity extends ThemeableActivity
         try {
             String versionName = getPackageManager()
                     .getPackageInfo(getPackageName(), 0).versionName;
-            final int versionCode = getPackageManager()
-                    .getPackageInfo(getPackageName(), 0).versionCode;
+            final long versionCode = getPackageManager()
+                    .getPackageInfo(getPackageName(), 0).getLongVersionCode();
             //noinspection deprecation
             version.setText(Html.fromHtml(versionName));
             version.setTextColor(theme.getAccentTextColor(this));
